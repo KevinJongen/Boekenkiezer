@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BoekKiezer 12-15</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Lezen voor de lijst 12-15 jaar</p>
+          <h1>Kies een boek dat echt bij je past</h1>
+          <p class="intro">
+            Beantwoord een paar vrolijke keuzes over thema, lengte en leesniveau.
+            Daarna krijg je 1 tot 5 boeken die goed aansluiten op jouw smaak.
+          </p>
+          <div class="hero-badges">
+            <span id="book-count-badge" class="badge">0 boeken geladen</span>
+            <span class="badge soft">Beslisboom met echte boekdata</span>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="blob blob-a"></div>
+          <div class="blob blob-b"></div>
+          <div class="blob blob-c"></div>
+          <div class="book-stack">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </header>
+
+      <main class="layout">
+        <section class="panel tree-panel">
+          <div class="panel-head">
+            <p class="panel-kicker">Stap voor stap</p>
+            <h2 id="question-title">Even laden...</h2>
+            <p id="question-copy">
+              De beslisboom wordt opgebouwd op basis van de boekenlijst.
+            </p>
+          </div>
+
+          <div id="progress" class="progress" aria-label="Voortgang"></div>
+          <div id="options" class="choice-grid" aria-live="polite"></div>
+
+          <div class="actions">
+            <button id="back-button" class="ghost-button" type="button">
+              Vorige stap
+            </button>
+            <button id="reset-button" class="ghost-button" type="button">
+              Opnieuw beginnen
+            </button>
+          </div>
+        </section>
+
+        <section class="panel results-panel">
+          <div class="panel-head">
+            <p class="panel-kicker">Boekentips</p>
+            <h2>Jouw selectie</h2>
+            <p id="results-copy">
+              Kies links je voorkeuren. Hier verschijnen de boeken die daarbij
+              passen.
+            </p>
+          </div>
+
+          <div id="selection-pills" class="pill-row"></div>
+          <div id="results" class="results-list"></div>
+        </section>
+      </main>
+
+      <section class="panel browse-panel">
+        <div class="panel-head">
+          <p class="panel-kicker">Volledig overzicht</p>
+          <h2>Alle verwerkte boeken</h2>
+          <p>
+            Onder deze beslisboom staat de complete set boeken die in de website
+            is ingeladen, zodat je ook vrij kunt rondkijken.
+          </p>
+        </div>
+        <div id="catalog-summary" class="catalog-summary"></div>
+        <div id="catalog" class="catalog-grid"></div>
+      </section>
+    </div>
+
+    <script src="./books-data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
